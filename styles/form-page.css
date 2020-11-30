@@ -5,6 +5,43 @@
 
 body {
   font-family: Futura;
+  font-size: 12px;
+}
+
+.father {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  color: #ab1862;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.container p {
+  margin: 10px;
+}
+
+.container h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.imageOne {
+  width: 60%;
+}
+
+.imageTwo {
+  width: 40%;
 }
 
 .footer-arrows {
@@ -28,6 +65,7 @@ body {
 }
 
 .footer-arrows a p {
+  font-size: 15px;
   margin: 0px 10px 0px 10px;
 }
 

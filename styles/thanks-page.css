@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Futura;
+  src: url("../assets/fonts/FuturaPTMedium.otf");
+}
+
+body {
+  font-family: Futura;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ab1862;
+}
+
+.container p {
+  width: 70%;
+  font-size: 30px;
+  line-height: 25px;
+  margin-bottom: 100px;
+  margin-top: 10px;
+}
+
+.container img {
+  width: 70%;
+}
+
+.like {
+  border: solid 1px gray;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}

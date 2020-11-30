@@ -28,7 +28,7 @@ function loadedHandler() {
 function changeModel() {
   let model = document.querySelector("#model3D");
   let element = model.getAttribute("gltf-model");
-
+  
   element ===
     "https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf" &&
     window.location.replace("../pages/photo-page.html");

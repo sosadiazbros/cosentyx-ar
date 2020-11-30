@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../styles/ar-page.css" rel="stylesheet" type="text/css" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-173558179-3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "UA-173558179-3");
+    </script>
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene embedded arjs vr-mode-ui="enabled: false">
+      <a-assets timeout="30000">
+        <a-asset-item
+          id="model1"
+          src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="model2"
+          src="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf"
+        ></a-asset-item>
+      </a-assets>
+      <a-marker markerhandler preset='hiro'>
+        <a-entity
+          id="model3D"
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="#model1"
+          animation-mixer
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+    <!-- <button type="button" class="cambiarModelo" onclick="cambiarModelo()">
+      Cambiar modelo
+    </button> -->
+    <div class="footer-image">
+      <div class="footer-arrows">
+        <a href="./welcome-page.html">
+          <img src="../assets/images/left-arrow.png" />
+          <p>Anterior</p>
+        </a>
+        <a onClick="changeModel()">
+          <p>Siguiente</p>
+          <img src="../assets/images/right-arrow.png" />
+        </a>
+      </div>
+      <img src="../assets/images/step-2.png" />
+    </div>
+  </body>
+  <script src="../scripts/arHandler.js"></script>
+</html>

@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ab1862;
+}
+
+.container h1{
+  margin: 20px 0 10px 0;
+}
+
+.stepsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.stepsContainer h5{
+  margin: 10px 0 10px 0;
+}
+
+.stepsContainer div {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.stepsContainer div img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.stepsContainer div p {
+  text-align: left;
+}
+
+.footer-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.footer-arrows a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ab1862;
+}
+
+.footer-arrows a img {
+  width: 25px;
+}
+
+.footer-arrows a p {
+  margin: 0px 10px 0px 10px;
+}
+
+.footer-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-image img{
+  margin-top: 10px;
+  width: 100%;
+}
+
+/*TIMELINE*/
+
+li {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: dodgerblue;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  top: 0.9em;
+  left: -4em;
+  width: 4em;
+  height: 0.1em;
+  background: dodgerblue;
+  z-index: -1;
+}
+
+li:first-child::before {
+  display: none;
+}
+
+.active {
+  background: #6a2960;
+}
+
+.active ~ li {
+  background: #c46992;
+}
+
+.active ~ li::before {
+  background: #c46992;
+}

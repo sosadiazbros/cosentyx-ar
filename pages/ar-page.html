@@ -24,7 +24,7 @@
     </script>
   </head>
   <body style="margin: 0px; overflow: hidden">
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene embedded arjs vr-mode-ui="enabled: false" loading-screen="dotsColor: red; backgroundColor: black">
       <a-assets timeout="30000">
         <a-asset-item
           id="model1"
@@ -46,6 +46,10 @@
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+
+    <div id="stepTitle" class="stepTitle">
+      <h2>Paso 1</h2>
+    </div>
 
     <div id="loader" class="sk-chase">
       <div class="sk-chase-dot"></div>

@@ -31,7 +31,7 @@ function changeModel() {
 
   element ==
   "https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf"
-    ? (window.location.href = "../pages/photo-page.html")
+    ? window.location.replace("../pages/photo-page.html")
     : null;
 
   model.removeAttribute("gltf-model");

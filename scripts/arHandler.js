@@ -27,6 +27,13 @@ function loadedHandler() {
 
 function changeModel() {
   let model = document.querySelector("#model3D");
+  let element = model.getAttribute("gltf-model");
+
+  element ==
+  "https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf"
+    ? (window.location.href = "../pages/photo-page.html")
+    : null;
+
   model.removeAttribute("gltf-model");
   model.setAttribute("gltf-model", "#model2");
 
@@ -34,13 +41,6 @@ function changeModel() {
   // sonido.removeAttribute("sound");
   // sonido.setAttribute("sound", "src: #snd_model2");
   // sonido.components.sound.playSound();
-
-  let element = model.getAttribute("gltf-model");
-  alert(element)
-  
-  element == "#model2"
-    ? (window.location.href = "../pages/photo-page.html")
-    : null;
 
   analyticsEvent("Pagina1", 200);
 }

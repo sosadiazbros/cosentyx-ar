@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Futura;
+  src: url("../assets/fonts/FuturaPTMedium.otf");
+}
+
+body {
+  font-family: Futura;
+}
+
 .footer-arrows {
   display: flex;
   justify-content: space-between;

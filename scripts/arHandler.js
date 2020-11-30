@@ -17,15 +17,16 @@ AFRAME.registerComponent("markerhandler", {
   },
 });
 
-var asset = document.querySelector("a-assets");
+let asset = document.querySelector("a-assets");
+let loader = document.getElementById("loader");
 asset.addEventListener("loaded", loadedHandler);
 
-function loadedHandler(event) {
-  console.log("modelos cargados....");
+function loadedHandler() {
+  loader.style.display = "none";
 }
 
 function changeModel() {
-  var model = document.querySelector("#model3D");
+  let model = document.querySelector("#model3D");
   model.removeAttribute("gltf-model");
   model.setAttribute("gltf-model", "#model2");
 
@@ -33,7 +34,14 @@ function changeModel() {
   // sonido.removeAttribute("sound");
   // sonido.setAttribute("sound", "src: #snd_model2");
   // sonido.components.sound.playSound();
+
+  let element = model.getAttribute("gltf-model");
+  alert(element)
   
+  element == "#model2"
+    ? (window.location.href = "../pages/photo-page.html")
+    : null;
+
   analyticsEvent("Pagina1", 200);
 }
 

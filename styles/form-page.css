@@ -5,7 +5,7 @@
 
 body {
   font-family: Futura;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .father {
@@ -21,6 +21,7 @@ body {
   text-align: center;
   width: 70%;
   color: #ab1862;
+  padding-top: 10%;
 }
 
 .container h1 {
@@ -44,6 +45,36 @@ body {
   width: 40%;
 }
 
+.questions {
+  color: #212121;
+}
+
+.formValues img {
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* HIDE RADIO */
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type="radio"] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type="radio"]:checked + img {
+  border: 1px solid #ab1862;
+  border-radius: 50%;
+  padding: 5px;
+}
+
 .footer-arrows {
   display: flex;
   justify-content: space-between;
@@ -55,18 +86,14 @@ body {
 .footer-arrows a {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #ab1862;
   padding: 10px 20px 10px 20px;
 }
 
 .footer-arrows a img {
-  width: 25px;
-}
-
-.footer-arrows a p {
-  font-size: 15px;
-  margin: 0px 10px 0px 10px;
+  width: 50%;
 }
 
 .footer-image {

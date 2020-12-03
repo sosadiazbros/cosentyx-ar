@@ -1,28 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/photo-page.css" rel="stylesheet" type="text/css" />
-    <title>Document</title>
+  <link href="../styles/photo-page.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/loader.css" rel="stylesheet" type="text/css" />
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 </head>
-<body>
-  <div class="title">
-    <p>Estamos trabajando en esta función.</p>
+
+<body style="margin: 0px; overflow: hidden">
+  <a-scene embedded arjs vr-mode-ui="enabled: false" loading-screen="dotsColor: red; backgroundColor: black">
+    <a-marker markerhandler preset="hiro"> </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+
+  <div class="stepTitle">
+    <p>Por favor tome una foto del resultado final</p>
   </div>
 
-    <div class="footer-image">
-        <div class="footer-arrows">
-          <a href="./ar-page.html">
-            <img src="../assets/images/left-arrow.png" />
-            <p>Anterior</p>
-          </a>
-          <a href="./form-page.html">
-            <p>Siguiente</p>
-            <img src="../assets/images/right-arrow.png" />
-          </a>
-        </div>
-        <img src="../assets/images/step-3.png" />
-      </div>
+  <div class="support">
+    <img src="../assets/logos/soporte-logo.png" />
+  </div>
+
+  <div class="photo">
+    <button><img src="../assets/logos/camera-logo.png" /></button>
+  </div>
+
+  <div class="footer-image">
+    <div class="footer-arrows">
+      <a href="./ar-page.html">
+        <img src="../assets/images/left-arrow.png" />
+      </a>
+      <a href="./form-page.html">
+        <img src="../assets/images/right-arrow.png" />
+      </a>
+    </div>
+    <img src="../assets/images/step-3.png" />
+  </div>
 </body>
+<script src="../scripts/arHandler.js"></script>
+
 </html>

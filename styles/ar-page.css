@@ -7,20 +7,31 @@ body {
   font-family: Futura;
 }
 
-.stepTitle{
+.support {
+  opacity: 0.7;
   position: absolute;
-  margin-left:auto;
-  margin-right:auto;
-  left:0;
-  right:0;
+  right: 10px;
+  top: 50px;
+}
+
+.support img {
+  width: 60px;
+}
+
+.stepTitle {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   top: 0;
   background-color: rgba(161, 161, 161, 0.7);
   padding: 0px;
-  color: #AB1862;
+  color: #ab1862;
   text-align: center;
 }
 
-.stepTitle h2{
+.stepTitle h2 {
   margin: 5px;
 }
 
@@ -35,17 +46,14 @@ body {
 .footer-arrows a {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #ab1862;
   padding: 10px 20px 10px 20px;
 }
 
 .footer-arrows a img {
-  width: 25px;
-}
-
-.footer-arrows a p {
-  margin: 0px 10px 0px 10px;
+  width: 50%;
 }
 
 .footer-image {
@@ -60,6 +68,6 @@ body {
   align-items: center;
 }
 
-.footer-image img{
-    width: 100%;
+.footer-image img {
+  width: 100%;
 }

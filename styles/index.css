@@ -18,6 +18,10 @@ body {
   color: #0077c3;
 }
 
+.container img{
+  width: 60%;
+}
+
 .subContainter {
   display: flex;
   flex-direction: column;

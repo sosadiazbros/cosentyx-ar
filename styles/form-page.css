@@ -111,3 +111,27 @@ body {
 .footer-image img {
   width: 100%;
 }
+
+@media (max-width: 360px) {
+  body {
+    font-family: Futura;
+    font-size: 12px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    color: #ab1862;
+    padding-top: 5%;
+  }
+
+  .formValues img {
+    width: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

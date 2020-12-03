@@ -22,18 +22,19 @@
   </script>
 </head>
 
+<!-- https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf -->
 <body style="margin: 0px; overflow: hidden">
   <a-scene embedded arjs vr-mode-ui="enabled: false" loading-screen="dotsColor: red; backgroundColor: black">
     <a-assets timeout="30000">
       <a-asset-item id="model1"
-        src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf">
+        src="../assets/models/Cosentyx.gltf">
       </a-asset-item>
       <a-asset-item id="model2"
         src="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf">
       </a-asset-item>
     </a-assets>
     <a-marker markerhandler preset='hiro'>
-      <a-entity id="model3D" position="0 0 0" scale="0.05 0.05 0.05" gltf-model="#model1" animation-mixer></a-entity>
+      <a-entity id="model3D" position="0 0 0" scale="10.000 10.000 10.000" gltf-model="#model1" animation-mixer></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>

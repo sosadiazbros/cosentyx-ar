@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Futura;
-  src: url("../assets/fonts/FuturaPTMedium.otf");
+  font-family: Flama;
+  src: url("../assets/fonts/Flama-Basic.otf");
 }
 
 body {
-  font-family: Futura;
+  font-family: Flama;
   font-size: 15px;
 }
 
@@ -130,7 +130,7 @@ body {
   }
 
   .formValues img {
-    width: 20px;
+    width: 25px;
     margin-left: 10px;
     margin-right: 10px;
   }

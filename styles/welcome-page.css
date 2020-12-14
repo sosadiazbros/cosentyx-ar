@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Futura;
-  src: url("../assets/fonts/FuturaPTMedium.otf");
+  font-family: Flama;
+  src: url("../assets/fonts/Flama-Basic.otf");
 }
 
 body {
-  font-family: Futura;
+  font-family: Flama;
 }
 
 .container {

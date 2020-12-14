@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Futura;
-  src: url("../assets/fonts/FuturaPTMedium.otf");
+  font-family: Flama;
+  src: url("../assets/fonts/Flama-Basic.otf");
 }
 
 body {
-  font-family: Futura;
+  font-family: Flama;
 }
 
 .container {
@@ -26,19 +26,9 @@ body {
 }
 
 .container img {
-  width: 70%;
+  width: 80%;
 }
 
-.like {
-  border: solid 1px gray;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
 
 @media (max-width: 360px) {
   .container {

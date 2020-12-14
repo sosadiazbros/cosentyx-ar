@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Futura;
-  src: url("../assets/fonts/FuturaPTMedium.otf");
+  font-family: Flama;
+  src: url("../assets/fonts/Flama-Basic.otf");
 }
 
 body {
-  font-family: Futura;
+  font-family: Flama;
   background-image: url("../assets/images/fondo-1.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,12 +14,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10%;
+  padding-top: 20%;
   color: #0077c3;
 }
 
-.container img{
-  width: 60%;
+.container img {
+  width: 90%;
 }
 
 .subContainter {
@@ -32,7 +32,7 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 20%;
 }
 
 .subContainter h2 {
@@ -79,4 +79,41 @@ body {
   text-decoration: none;
   font-size: 20px;
   border-radius: 8px;
+}
+
+.footer {
+  margin-top: 30%;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media (max-width: 360px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+    color: #0077c3;
+  }
+
+  .subContainter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+
+  .footer {
+    margin-top: 10%;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+  }
 }

@@ -1,78 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/form-page.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../styles/form-page.css" rel="stylesheet" type="text/css" />
-  <title>Document</title>
-</head>
+  <body>
+    <div class="father">
+      <div class="container">
+        <h1>Breve encuesta de satisfacción</h1>
+        <p>
+          Su opinión es valiosa para nosotros, por favor ayúdenos a mejorar
+          respondiendo estas preguntas
+        </p>
+        <div class="questions">
+          <p>¿Cómo califica esta herramienta según su experiencia?</p>
+          <div class="formValues">
+            <label>
+              <input id="q1a1" type="radio" name="question1" value="1" />
+              <img
+                id="q1a1img"
+                src="../assets/logos/form/cara triste sin seleccion.png"
+              />
+            </label>
+            <label>
+              <input id="q1a2" type="radio" name="question1" value="2" />
+              <img
+                id="q1a2img"
+                src="../assets/logos/form/cara seria sin seleccion.png"
+              />
+            </label>
+            <label>
+              <input id="q1a3" type="radio" name="question1" value="3" />
+              <img
+                id="q1a3img"
+                src="../assets/logos/form/cara feliz sin seleccion.png"
+              />
+            </label>
+          </div>
 
-<body>
-  <div class="father">
-    <div class="container">
-      <h1>Breve encuesta de satisfacción</h1>
-      <p>
-        Su opinión es valiosa para nosotros, por favor ayúdenos a mejorar
-        respondiendo estas preguntas
-      </p>
-      <div class="questions">
-        <h3>¿Cómo califica esta herramienta según su experiencia?</h3>
-        <div class="formValues">
-          <label>
-            <input type="radio" name="question1" value="1" />
-            <img src="../assets/logos/form/cara triste sin seleccion.png" />
-          </label>
-          <label>
-            <input type="radio" name="question1" value="2" />
-            <img src="../assets/logos/form/cara seria sin seleccion.png" />
-          </label>
-          <label>
-            <input type="radio" name="question1" value="3" />
-            <img src="../assets/logos/form/cara feliz sin seleccion.png" />
-          </label>
-        </div>
-
-        <h3>¿Esto facilitó la aplicación de su producto?</h3>
-        <div class="formValues">
-          <label>
-            <input type="radio" name="question2" value="1" />
-            <img src="../assets/logos/form/icono positivo sin seleccion.png" />
-          </label>
-          <label>
-            <input type="radio" name="question2" value="2" />
-            <img src="../assets/logos/form/icono negativo sin seleccion.png" />
-          </label>
-        </div>
-        <h3>
-          Utilizaría nuevamente ésta herramienta para la aplicación de
-          Cosentyx?
-        </h3>
-        <div class="formValues">
-          <label>
-            <input type="radio" name="question3" value="1" />
-            <img src="../assets/logos/form/icono positivo sin seleccion.png" />
-          </label>
-          <label>
-            <input type="radio" name="question3" value="2" />
-            <img src="../assets/logos/form/icono negativo sin seleccion.png" />
-          </label>
+          <p>¿Esto facilitó la aplicación de su producto?</p>
+          <div class="formValues">
+            <label>
+              <input id="q2a1" type="radio" name="question2" value="1" />
+              <img
+                id="q2a1img"
+                src="../assets/logos/form/icono positivo sin seleccion.png"
+              />
+            </label>
+            <label>
+              <input id="q2a2" type="radio" name="question2" value="2" />
+              <img
+                id="q2a2img"
+                src="../assets/logos/form/icono negativo sin seleccion.png"
+              />
+            </label>
+          </div>
+          <p>
+            Utilizaría nuevamente ésta herramienta para la aplicación de
+            Cosentyx?
+          </p>
+          <div class="formValues">
+            <label>
+              <input id="q3a1" type="radio" name="question3" value="1" />
+              <img
+                id="q3a1img"
+                src="../assets/logos/form/icono positivo sin seleccion.png"
+              />
+            </label>
+            <label>
+              <input id="q3a2" type="radio" name="question3" value="2" />
+              <img
+                id="q3a2img"
+                src="../assets/logos/form/icono negativo sin seleccion.png"
+              />
+            </label>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer-image">
-    <div class="footer-arrows">
-      <a href="./photo-page.html">
-        <img src="../assets/images/left-arrow.png" />
-      </a>
-      <a href="./thanks-page.html">
-        <img src="../assets/images/right-arrow.png" />
-      </a>
+    <div class="footer-image">
+      <div class="footer-arrows">
+        <a href="./photo-page.html">
+          <img src="../assets/images/left-arrow.png" />
+        </a>
+        <a href="./thanks-page.html">
+          <img src="../assets/images/right-arrow.png" />
+        </a>
+      </div>
+      <img src="../assets/images/step-4.png" />
     </div>
-    <img src="../assets/images/step-4.png" />
-  </div>
-</body>
 
+    <script src="../scripts/formCheckers.js"></script>
+  </body>
 </html>

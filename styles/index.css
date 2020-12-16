@@ -85,7 +85,7 @@ body {
   margin-top: 30%;
   color: white;
   font-size: 10px;
-  text-align: center;
+  text-align: justify;
 }
 
 @media (max-width: 360px) {
@@ -114,6 +114,6 @@ body {
     margin-top: 10%;
     color: white;
     font-size: 10px;
-    text-align: center;
+    text-align: justify;
   }
 }

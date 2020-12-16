@@ -33,7 +33,7 @@
       loading-screen="dotsColor: red; backgroundColor: black"
     >
       <a-assets timeout="30000">
-        <a-asset-item id="model1" src="../assets/models/CosentyxBlenderV1.gltf">
+        <a-asset-item id="model1" src="../assets/models/CosentyxV6.gltf">
         </a-asset-item>
         <a-asset-item
           id="model2"
@@ -42,7 +42,19 @@
         </a-asset-item>
       </a-assets>
       <a-marker markerhandler preset="hiro">
-        <a-entity id="model3D" position="0 0 0" scale="0.381 0.381 0.381" animation-mixer gltf-model="#model1"></a-entity>
+        <a-entity
+          id="model3D"
+          position="0 0 0"
+          scale="0.381 0.381 0.381"
+          animation-mixer
+          gltf-model="#model1"
+        ></a-entity>
+        <a-entity
+          light="intensity: 1.78; castShadow: true; type: point"
+          position="0.05505 1.03385 0.00896"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
@@ -74,6 +86,10 @@
         </a>
       </div>
       <img src="../assets/images/step-2.png" />
+      <div class="footer-legend">
+        <img src="../assets/logos/novartis-new-logo-old.png" />
+        <p>Clic aquí para más información</p>
+      </div>
     </div>
   </body>
   <script src="../scripts/arHandler.js"></script>

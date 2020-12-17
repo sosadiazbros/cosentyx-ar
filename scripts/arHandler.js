@@ -32,9 +32,8 @@ let step = 1;
 
 function NextModel() {
   let element = model.getAttribute("gltf-model");
-  console.log("Elementoooo: " + element)
   step++;
-  element === "#model5" &&
+  element === "../assets/models/CosentyxS5.gltf" &&
     window.location.replace("../pages/photo-page.html");
 
   model.removeAttribute("gltf-model");
@@ -51,9 +50,9 @@ function NextModel() {
 }
 
 function PrevModel(){
-  let element = sound.getAttribute("sound");
+  let element = model.getAttribute("gltf-model");
   step--;
-  element === "src: #audio1" &&
+  element === "../assets/models/CosentyxS1.gltf" &&
     window.location.replace("../pages/welcome-page.html");
 
   model.removeAttribute("gltf-model");

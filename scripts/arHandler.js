@@ -34,16 +34,25 @@ let sound = document.querySelector("#sound");
 let title = document.getElementById("stepTitle");
 let step = 1;
 
-let time = false
+let time = false;
 function timeOutNextModel() {
-  if(!time){
+  if (!time) {
     setTimeout(function () {
-    console.log("next model")
-    NextModel()
-    time = false
+      NextModel();
+      time = false;
+    }, 500);
+    time = true;
+  }
+}
+
+function timeOutPrevtModel() {
+  if (!time) {
+    setTimeout(function () {
+      PrevModel();
+      time = false;
     }, 1000);
-    time = true
-  } 
+    time = true;
+  }
 }
 
 function NextModel() {

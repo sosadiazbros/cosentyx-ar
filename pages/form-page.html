@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../styles/form-page.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/components/footer-modal.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
   </head>
 
@@ -82,6 +83,31 @@
       </div>
     </div>
 
+    <div
+      onclick="toggleModal()"
+      id="footerModal"
+      class="footerModalbg hideModal"
+    >
+      <div class="footerModal">
+        <img src="../assets/logos/novartis-new-logo-old.png" />
+        <p>
+          Novartis de Colombia S.A. Calle 93B No. 16-31. PBX 654 44 44. Bogotá,
+          D.C. Novartis de Colombia S.A. Novartis Pharma, AG de Basilea, Suiza.
+          ® = Marca registrada. Mayor información en el Departamento Medico de
+          Novartis de Colombia S.A. Tel. 6544444. Material exclusivo para uso de
+          pacientes. No se autoriza la grabación o toma de fotografías del
+          material y tampoco difusión por medios no autorizados por Novartis.
+          Para mayor información consultar la información completa para la
+          prescripción de Cosentyx (en la palabra Cosentyx debe haber un link
+          que redirija a la sucinta que adjunté en el correo) Fecha de
+          aprobación: XXXXXX. Fecha de caducidad: XXXXXX. Código de aprobación
+          P3: XXXXXX. Si desea reportar un evento adverso ingrese al siguiente
+          link: https://www.report.novartis.com/es o a través del correo
+          electrónico: colombia.farmacovigilancia@novartis.com
+        </p>
+      </div>
+    </div>
+
     <div class="footer-image">
       <div class="footer-arrows">
         <a href="./photo-page.html">
@@ -92,12 +118,13 @@
         </a>
       </div>
       <img src="../assets/images/step-4.png" />
-      <div class="footer-legend">
-        <img src="../assets/logos/novartis-new-logo-old.png"/>
+      <div onclick="toggleModal()" class="footer-legend">
+        <img src="../assets/logos/novartis-new-logo-old.png" />
         <p>Clic aquí para más información</p>
       </div>
     </div>
 
     <script src="../scripts/formCheckers.js"></script>
+    <script src="../scripts/toggleModal.js"></script>
   </body>
 </html>

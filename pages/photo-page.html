@@ -1,49 +1,84 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link href="../styles/photo-page.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/loader.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/components/footer-modal.css" rel="stylesheet" type="text/css" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
 
-<head>
-  <link href="../styles/photo-page.css" rel="stylesheet" type="text/css" />
-  <link href="../styles/loader.css" rel="stylesheet" type="text/css" />
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <!-- we import arjs version without NFT but with marker + location based support -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-</head>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene
+      embedded
+      arjs
+      vr-mode-ui="enabled: false"
+      loading-screen="dotsColor: red; backgroundColor: black"
+    >
+      <a-marker markerhandler preset="hiro"> </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
 
-<body style="margin: 0px; overflow: hidden">
-  <a-scene embedded arjs vr-mode-ui="enabled: false" loading-screen="dotsColor: red; backgroundColor: black">
-    <a-marker markerhandler preset="hiro"> </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
+    <div
+      onclick="toggleModal()"
+      id="footerModal"
+      class="footerModalbg hideModal"
+    >
+      <div class="footerModal">
+        <img src="../assets/logos/novartis-new-logo-old.png" />
+        <p>
+          Novartis de Colombia S.A. Calle 93B No. 16-31. PBX 654 44 44. Bogotá,
+          D.C. Novartis de Colombia S.A. Novartis Pharma, AG de Basilea, Suiza.
+          ® = Marca registrada. Mayor información en el Departamento Medico de
+          Novartis de Colombia S.A. Tel. 6544444. Material exclusivo para uso de
+          pacientes. No se autoriza la grabación o toma de fotografías del
+          material y tampoco difusión por medios no autorizados por Novartis.
+          Para mayor información consultar la información completa para la
+          prescripción de Cosentyx (en la palabra Cosentyx debe haber un link
+          que redirija a la sucinta que adjunté en el correo) Fecha de
+          aprobación: XXXXXX. Fecha de caducidad: XXXXXX. Código de aprobación
+          P3: XXXXXX. Si desea reportar un evento adverso ingrese al siguiente
+          link: https://www.report.novartis.com/es o a través del correo
+          electrónico: colombia.farmacovigilancia@novartis.com
+        </p>
+      </div>
+    </div>
 
-  <div class="stepTitle">
-    <p>Por favor apunte la cámara hacia el resultado final del aplicador Cosentyx, luego tome una foto pulsando el botón inferior</p>
-  </div>
+    <div class="stepTitle">
+      <p>
+        Por favor apunte la cámara hacia el resultado final del aplicador
+        Cosentyx, luego tome una foto pulsando el botón inferior
+      </p>
+    </div>
 
-  <div class="support">
-    <img src="../assets/logos/soporte-logo.png" />
-  </div>
-
-  <div class="photo">
-    <button><img src="../assets/logos/camera-logo.png" /></button>
-  </div>
-
-  <div class="footer-image">
-    <div class="footer-arrows">
-      <a href="./ar-page.html">
-        <img src="../assets/images/left-arrow.png" />
-      </a>
-      <a href="./form-page.html">
-        <img src="../assets/images/right-arrow.png" />
+    <div class="support">
+      <a href="tel:+573163504126">
+        <img src="../assets/logos/soporte-logo.png" />
       </a>
     </div>
-    <img src="../assets/images/step-3.png" />
-    <div class="footer-legend">
-      <img src="../assets/logos/novartis-new-logo-old.png"/>
-      <p>Clic aquí para más información</p>
-    </div>
-  </div>
-</body>
-<script src="../scripts/arHandler.js"></script>
 
+    <div class="photo">
+      <button><img src="../assets/logos/camera-logo.png" /></button>
+    </div>
+
+    <div class="footer-image">
+      <div class="footer-arrows">
+        <a href="./ar-page.html">
+          <img src="../assets/images/left-arrow.png" />
+        </a>
+        <a href="./form-page.html">
+          <img src="../assets/images/right-arrow.png" />
+        </a>
+      </div>
+      <img src="../assets/images/step-3.png" />
+      <div onclick="toggleModal()" class="footer-legend">
+        <img src="../assets/logos/novartis-new-logo-old.png" />
+        <p>Clic aquí para más información</p>
+      </div>
+    </div>
+  </body>
+  <script src="../scripts/arHandler.js"></script>
+  <script src="../scripts/toggleModal.js"></script>
 </html>

@@ -46,7 +46,9 @@ function NextModel() {
     sound.components.sound.stopSound();
     sound.removeAttribute("sound");
     sound.setAttribute("sound", `src: #audio${step}`);
-    sound.components.sound.playSound();
+    if (isOnMarker) {
+      sound.components.sound.playSound();
+    }
 
     title.innerHTML = `<h2>Paso ${step}</h2>`;
 

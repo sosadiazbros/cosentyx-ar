@@ -40,7 +40,7 @@ function timeOutNextModel() {
     setTimeout(function () {
       NextModel();
       time = false;
-    }, 200);
+    }, 500);
     time = true;
   }
 }
@@ -50,7 +50,7 @@ function timeOutPrevModel() {
     setTimeout(function () {
       PrevModel();
       time = false;
-    }, 200);
+    }, 500);
     time = true;
   }
 }

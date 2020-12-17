@@ -36,6 +36,7 @@
       arjs
       vr-mode-ui="enabled: false"
       light="defaultLightsEnabled: false"
+      renderer="antialias: true; logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;"
     >
       <a-assets timeout="30000">
         <a-asset-item id="model1" src="../assets/models/CosentyxS1.gltf">
@@ -82,7 +83,6 @@
           src="../assets/sounds/step-5.mp3"
           preload="auto"
         ></audio>
-
       </a-assets>
       <a-marker markerhandler preset="hiro">
         <a-entity
@@ -110,11 +110,7 @@
           data-aframe-default-light=""
           aframe-injected=""
         ></a-entity>
-        <a-entity
-          id="sound"
-          sound="src: #audio1"
-          autoplay="false"
-        ></a-entity>
+        <a-entity id="sound" sound="src: #audio1" autoplay="false"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>

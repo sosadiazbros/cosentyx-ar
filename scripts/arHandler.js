@@ -11,7 +11,7 @@ AFRAME.registerComponent("markerhandler", {
     this.el.sceneEl.addEventListener("markerLost", () => {
       model.setAttribute("animation-mixer", { timeScale: 0 });
       var sonido = document.querySelector("#sound");
-      sonido.components.sound.pauseSound();
+      sonido.components.sound.stopSound();
       console.log("marcador perdido...");
     });
   },

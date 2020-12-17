@@ -2,6 +2,12 @@
 <html>
   <head>
     <link href="../styles/ar-page.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/loader.css" rel="stylesheet" type="text/css" />
+    <link
+      href="../styles/components/footer-modal.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -22,45 +28,166 @@
       gtag("config", "UA-173558179-3");
     </script>
   </head>
+
+  <!-- https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf -->
   <body style="margin: 0px; overflow: hidden">
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene
+      embedded
+      arjs
+      vr-mode-ui="enabled: false"
+      light="defaultLightsEnabled: false"
+      renderer="antialias: true; logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true; colorManagement: true;
+      physicallyCorrectLights: true;"
+    >
       <a-assets timeout="30000">
-        <a-asset-item
-          id="model1"
-          src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        ></a-asset-item>
-        <a-asset-item
-          id="model2"
-          src="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf"
-        ></a-asset-item>
+        <a-asset-item id="model1" src="../assets/models/CosentyxS1.gltf">
+        </a-asset-item>
+
+        <a-asset-item id="model2" src="../assets/models/CosentyxS2.gltf">
+        </a-asset-item>
+
+        <a-asset-item id="model3" src="../assets/models/CosentyxS3.gltf">
+        </a-asset-item>
+
+        <a-asset-item id="model4" src="../assets/models/CosentyxS4.gltf">
+        </a-asset-item>
+
+        <a-asset-item id="model5" src="../assets/models/CosentyxS5.gltf">
+        </a-asset-item>
+
+        <audio
+          id="audio1"
+          src="../assets/sounds/step-1.mp3"
+          preload="auto"
+        ></audio>
+
+        <audio
+          id="audio2"
+          src="../assets/sounds/step-2.mp3"
+          preload="auto"
+        ></audio>
+
+        <audio
+          id="audio3"
+          src="../assets/sounds/step-3.mp3"
+          preload="auto"
+        ></audio>
+
+        <audio
+          id="audio4"
+          src="../assets/sounds/step-4.mp3"
+          preload="auto"
+        ></audio>
+
+        <audio
+          id="audio5"
+          src="../assets/sounds/step-5.mp3"
+          preload="auto"
+        ></audio>
       </a-assets>
-      <a-marker markerhandler preset='hiro'>
+      <a-marker markerhandler preset="hiro">
         <a-entity
           id="model3D"
           position="0 0 0"
-          scale="0.05 0.05 0.05"
-          gltf-model="#model1"
+          scale="0.600 0.600 0.600"
           animation-mixer
+          gltf-model="#model1"
         ></a-entity>
+        <a-entity
+          light="intensity: 4; castShadow: true; type: point"
+          position="0.055 4.294 0.009"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
+        <a-entity
+          light="intensity: 4; castShadow: true; type: point"
+          position="-2.395 0.829 -0.252"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
+        <a-entity
+          light="intensity: 4; castShadow: true; type: point"
+          position="1.789 1.372 -0.242"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
+        <a-entity
+          light="intensity: 4; castShadow: true; type: point"
+          position="-0.09469 1.372 -2.60061"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
+        <a-entity
+          light="intensity: 4; castShadow: true; type: point"
+          position="-0.09469 1.372 2.53395"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
+        <a-entity id="sound" sound="src: #audio1" autoplay="false"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
-    <!-- <button type="button" class="cambiarModelo" onclick="cambiarModelo()">
-      Cambiar modelo
-    </button> -->
+
+    <div
+      onclick="toggleModal()"
+      id="footerModal"
+      class="footerModalbg hideModal"
+    >
+      <div class="footerModal">
+        <img src="../assets/logos/novartis-new-logo-old.png" />
+        <p>
+          Novartis de Colombia S.A. Calle 93B No. 16-31. PBX 654 44 44. Bogotá,
+          D.C. Novartis de Colombia S.A. Novartis Pharma, AG de Basilea, Suiza.
+          ® = Marca registrada. Mayor información en el Departamento Medico de
+          Novartis de Colombia S.A. Tel. 6544444. Material exclusivo para uso de
+          pacientes. No se autoriza la grabación o toma de fotografías del
+          material y tampoco difusión por medios no autorizados por Novartis.
+          Para mayor información consultar la información completa para la
+          prescripción de Cosentyx (en la palabra Cosentyx debe haber un link
+          que redirija a la sucinta que adjunté en el correo) Fecha de
+          aprobación: XXXXXX. Fecha de caducidad: XXXXXX. Código de aprobación
+          P3: XXXXXX. Si desea reportar un evento adverso ingrese al siguiente
+          link: https://www.report.novartis.com/es o a través del correo
+          electrónico: colombia.farmacovigilancia@novartis.com
+        </p>
+      </div>
+    </div>
+
+    <div id="stepTitle" class="stepTitle">
+      <h2>Paso 1</h2>
+    </div>
+
+    <div id="loader" class="sk-chase">
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+    </div>
+
+    <div class="support">
+      <a href="tel:+573163504126">
+        <img src="../assets/logos/soporte-logo.png" />
+      </a>
+    </div>
+
     <div class="footer-image">
       <div class="footer-arrows">
-        <a href="./welcome-page.html">
+        <a onclick="PrevModel()">
           <img src="../assets/images/left-arrow.png" />
-          <p>Anterior</p>
         </a>
-        <a onClick="changeModel()">
-          <p>Siguiente</p>
+        <a onclick="NextModel()">
           <img src="../assets/images/right-arrow.png" />
         </a>
       </div>
       <img src="../assets/images/step-2.png" />
+      <div onclick="toggleModal()" class="footer-legend">
+        <img src="../assets/logos/novartis-new-logo-old.png" />
+        <p>Clic aquí para más información</p>
+      </div>
     </div>
   </body>
   <script src="../scripts/arHandler.js"></script>
+  <script src="../scripts/toggleModal.js"></script>
 </html>

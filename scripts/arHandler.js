@@ -25,24 +25,24 @@ function loadedHandler() {
   loader.style.display = "none";
 }
 
-function changeModel() {
-  let model = document.querySelector("#model3D");
-  let sound = document.querySelector("#sound");
-  let title = document.getElementById("stepTitle");
-  let element = sound.getAttribute("sound");
-  let step = 2;
+let model = document.querySelector("#model3D");
+let sound = document.querySelector("#sound");
+let title = document.getElementById("stepTitle");
+let element = sound.getAttribute("sound");
+let step = 1;
 
+function changeModel() {
+  step++;
   element === "src: #audio5" &&
     window.location.replace("../pages/photo-page.html");
 
   model.removeAttribute("gltf-model");
-  model.setAttribute("gltf-model", `model${step}`);
+  model.setAttribute("gltf-model", `#model${step}`);
 
   sound.removeAttribute("sound");
   sound.setAttribute("sound", `src: #audio${step}`);
   sound.components.sound.playSound();
 
-  step++;
   title.innerHTML = `<h2>Paso ${step}</h2>`;
 
   analyticsEvent("Pagina1", 200);

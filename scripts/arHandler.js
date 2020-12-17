@@ -31,10 +31,10 @@ let title = document.getElementById("stepTitle");
 let step = 1;
 
 function NextModel() {
-  let element = sound.getAttribute("sound");
+  let element = model.getAttribute("gltf-model");
+  console.log("Elementoooo: " + element)
   step++;
-  console.log("ELementoooo: " + element)
-  element === "src: #audio5" &&
+  element === "#model5" &&
     window.location.replace("../pages/photo-page.html");
 
   model.removeAttribute("gltf-model");

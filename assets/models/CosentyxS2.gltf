@@ -207,6 +207,7 @@
             "doubleSided" : true,
             "name" : "BLANCO",
             "pbrMetallicRoughness" : {
+                "metallicFactor" : 0.41134750843048096,
                 "roughnessFactor" : 0.4343145787715912
             }
         },
@@ -264,6 +265,7 @@
                     0.3921568691730499,
                     1
                 ],
+                "metallicFactor" : 0.4964538812637329,
                 "roughnessFactor" : 0.6000000238418579
             }
         },
@@ -291,10 +293,10 @@
             "name" : "CRISTAL INTERIOR",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    0.250980406999588,
-                    0.250980406999588,
-                    0.250980406999588,
-                    1
+                    0.841203510761261,
+                    0.841203510761261,
+                    0.841203510761261,
+                    0.30000001192092896
                 ],
                 "metallicFactor" : 0,
                 "roughnessFactor" : 0.20000000298023224

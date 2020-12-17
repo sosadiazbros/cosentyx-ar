@@ -1,5 +1,4 @@
 var isOnMarker = false;
-this.video = document.querySelector(this.el.getAttribute('id'))
 
 AFRAME.registerComponent("markerhandler", {
   init: function () {
@@ -27,7 +26,6 @@ let loader = document.getElementById("loader");
 asset.addEventListener("loaded", loadedHandler);
 
 function loadedHandler() {
-  this.video.load()
   loader.style.display = "none";
 }
 

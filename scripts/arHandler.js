@@ -31,10 +31,29 @@ let title = document.getElementById("stepTitle");
 let element = sound.getAttribute("sound");
 let step = 1;
 
-function changeModel() {
+function NextModel() {
   step++;
+  alert(element)
   element === "src: #audio5" &&
     window.location.replace("../pages/photo-page.html");
+
+  model.removeAttribute("gltf-model");
+  model.setAttribute("gltf-model", `#model${step}`);
+
+  sound.components.sound.stopSound();
+  sound.removeAttribute("sound");
+  sound.setAttribute("sound", `src: #audio${step}`);
+  sound.components.sound.playSound();
+
+  title.innerHTML = `<h2>Paso ${step}</h2>`;
+
+  analyticsEvent("Pagina1", 200);
+}
+
+function PrevModel(){
+  step--;
+  element === "src: #audio1" &&
+    window.location.replace("../pages/welcome-page.html");
 
   model.removeAttribute("gltf-model");
   model.setAttribute("gltf-model", `#model${step}`);

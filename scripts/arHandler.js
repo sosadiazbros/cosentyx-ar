@@ -78,26 +78,24 @@ function PrevModel() {
   }
 }
 
-// wait until the model is loaded
-this.el.addEventListener("model-loaded", (e) => {
-  // grab the mesh
-  let model = this.el.getObject3D("mesh");
-  // find the node with the basic material
-  model.traverse(function (node) {
-    // ignore bones and other nodes without any material
-    if (!node.material) return;
+AFRAME.registerComponent("foo", {
+  init: function () {
+    this.el.addEventListener("model-loaded", (e) => {
+      console.log(e);
+      let model = this.el.getObject3D("mesh");
+      model.traverse(function (node) {
+        if (!node.material) return;
 
-    // keep the reference to the old material - we want to dispose it later
-    var tmp = node.material;
-    // substitute the material
-    node.material = new THREE.MeshStandardMaterial({
-      skinning: true, // the original material is using skinning
-      map: node.material.map, // we want the original texture
+        var tmp = node.material;
+        node.material = new THREE.MeshStandardMaterial({
+          skinning: true,
+          map: node.material.map,
+        });
+        node.material.needsUpdate = true;
+        tmp.dispose();
+      });
     });
-    // update and clean up
-    node.material.needsUpdate = true;
-    tmp.dispose();
-  });
+  },
 });
 
 function analyticsEvent(evento, tiempo) {

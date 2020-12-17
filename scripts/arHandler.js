@@ -39,6 +39,7 @@ function changeModel() {
   model.removeAttribute("gltf-model");
   model.setAttribute("gltf-model", `#model${step}`);
 
+  sound.components.sound.stopSound();
   sound.removeAttribute("sound");
   sound.setAttribute("sound", `src: #audio${step}`);
   sound.components.sound.playSound();

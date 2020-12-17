@@ -27,23 +27,23 @@ function loadedHandler() {
 
 function changeModel() {
   let model = document.querySelector("#model3D");
+  let sound = document.querySelector("#sound");
   let title = document.getElementById("stepTitle");
-  let step = 1;
-  let element = model.getAttribute("gltf-model");
+  let element = sound.getAttribute("sound");
+  let step = 2;
 
-  element ===
-    "https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf" &&
+  element === "src: #audio5" &&
     window.location.replace("../pages/photo-page.html");
 
   model.removeAttribute("gltf-model");
-  model.setAttribute("gltf-model", "#model2");
+  model.setAttribute("gltf-model", `model${step}`);
+
+  sound.removeAttribute("sound");
+  sound.setAttribute("sound", `src: #audio${step}`);
+  sound.components.sound.playSound();
+
   step++;
   title.innerHTML = `<h2>Paso ${step}</h2>`;
-
-  // var sonido = document.querySelector("#sonido");
-  // sonido.removeAttribute("sound");
-  // sonido.setAttribute("sound", "src: #snd_model2");
-  // sonido.components.sound.playSound();
 
   analyticsEvent("Pagina1", 200);
 }

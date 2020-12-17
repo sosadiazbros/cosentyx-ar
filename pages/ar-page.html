@@ -40,16 +40,49 @@
       <a-assets timeout="30000">
         <a-asset-item id="model1" src="../assets/models/CosentyxV1.gltf">
         </a-asset-item>
-        <a-asset-item
-          id="model2"
-          src="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf"
-        >
+
+        <a-asset-item id="model2" src="../assets/models/CosentyxV1.gltf">
         </a-asset-item>
+
+        <a-asset-item id="model3" src="../assets/models/CosentyxV1.gltf">
+        </a-asset-item>
+
+        <a-asset-item id="model4" src="../assets/models/CosentyxV1.gltf">
+        </a-asset-item>
+
+        <a-asset-item id="model5" src="../assets/models/CosentyxV1.gltf">
+        </a-asset-item>
+
         <audio
-          id="soundFile"
+          id="audio1"
           src="../assets/sounds/setp-1.ogg"
           preload="auto"
         ></audio>
+
+        <audio
+          id="audio2"
+          src="../assets/sounds/setp-2.ogg"
+          preload="auto"
+        ></audio>
+
+        <audio
+          id="audio3"
+          src="../assets/sounds/setp-3.ogg"
+          preload="auto"
+        ></audio>
+
+        <audio
+          id="audio4"
+          src="../assets/sounds/setp-4.ogg"
+          preload="auto"
+        ></audio>
+
+        <audio
+          id="audio5"
+          src="../assets/sounds/setp-5.ogg"
+          preload="auto"
+        ></audio>
+
       </a-assets>
       <a-marker markerhandler preset="hiro">
         <a-entity
@@ -79,7 +112,7 @@
         ></a-entity>
         <a-entity
           id="sound"
-          sound="src: #soundFile"
+          sound="src: #audio1"
           autoplay="false"
         ></a-entity>
       </a-marker>
@@ -135,7 +168,7 @@
         <a href="./welcome-page.html">
           <img src="../assets/images/left-arrow.png" />
         </a>
-        <a href="./photo-page.html">
+        <a onclick="changeModel()" href="./photo-page.html">
           <img src="../assets/images/right-arrow.png" />
         </a>
       </div>

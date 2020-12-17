@@ -78,26 +78,6 @@ function PrevModel() {
   }
 }
 
-AFRAME.registerComponent("foo", {
-  init: function () {
-    this.el.addEventListener("model-loaded", (e) => {
-      console.log(e);
-      let model = this.el.getObject3D("mesh");
-      model.traverse(function (node) {
-        if (!node.material) return;
-
-        var tmp = node.material;
-        node.material = new THREE.MeshStandardMaterial({
-          skinning: true,
-          map: node.material.map,
-        });
-        node.material.needsUpdate = true;
-        tmp.dispose();
-      });
-    });
-  },
-});
-
 function analyticsEvent(evento, tiempo) {
   gtag("event", "click", {
     event_category: "pagina",

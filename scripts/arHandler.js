@@ -4,13 +4,13 @@ AFRAME.registerComponent("markerhandler", {
 
     this.el.sceneEl.addEventListener("markerFound", () => {
       model.setAttribute("animation-mixer", { timeScale: 1 });
-      var sonido = document.querySelector("#soundFile");
+      var sonido = document.querySelector("#sound");
       sonido.components.sound.playSound();
       console.log("marcador encontrado...");
     });
     this.el.sceneEl.addEventListener("markerLost", () => {
       model.setAttribute("animation-mixer", { timeScale: 0 });
-      var sonido = document.querySelector("#soundFile");
+      var sonido = document.querySelector("#sound");
       sonido.components.sound.pauseSound();
       console.log("marcador perdido...");
     });

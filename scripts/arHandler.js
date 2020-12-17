@@ -28,10 +28,10 @@ function loadedHandler() {
 let model = document.querySelector("#model3D");
 let sound = document.querySelector("#sound");
 let title = document.getElementById("stepTitle");
-let element = sound.getAttribute("sound");
 let step = 1;
 
 function NextModel() {
+  let element = sound.getAttribute("sound");
   step++;
   alert(element)
   element === "src: #audio5" &&
@@ -51,6 +51,7 @@ function NextModel() {
 }
 
 function PrevModel(){
+  let element = sound.getAttribute("sound");
   step--;
   element === "src: #audio1" &&
     window.location.replace("../pages/welcome-page.html");

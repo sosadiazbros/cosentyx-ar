@@ -4,14 +4,14 @@ AFRAME.registerComponent("markerhandler", {
 
     this.el.sceneEl.addEventListener("markerFound", () => {
       model.setAttribute("animation-mixer", { timeScale: 1 });
-      // var sonido = document.querySelector("#sonido");
-      // sonido.components.sound.playSound();
+      var sonido = document.querySelector("#soundFile");
+      sonido.components.sound.playSound();
       console.log("marcador encontrado...");
     });
     this.el.sceneEl.addEventListener("markerLost", () => {
       model.setAttribute("animation-mixer", { timeScale: 0 });
-      // var sonido = document.querySelector("#sonido");
-      // sonido.components.sound.pauseSound();
+      var sonido = document.querySelector("#soundFile");
+      sonido.components.sound.pauseSound();
       console.log("marcador perdido...");
     });
   },

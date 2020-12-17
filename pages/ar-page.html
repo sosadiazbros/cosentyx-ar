@@ -3,7 +3,11 @@
   <head>
     <link href="../styles/ar-page.css" rel="stylesheet" type="text/css" />
     <link href="../styles/loader.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/components/footer-modal.css" rel="stylesheet" type="text/css" />
+    <link
+      href="../styles/components/footer-modal.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -41,6 +45,11 @@
           src="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf"
         >
         </a-asset-item>
+        <audio
+          id="soundFile"
+          src="../assets/sounds/setp-1.ogg"
+          preload="auto"
+        ></audio>
       </a-assets>
       <a-marker markerhandler preset="hiro">
         <a-entity
@@ -68,35 +77,39 @@
           data-aframe-default-light=""
           aframe-injected=""
         ></a-entity>
+        <a-entity
+          id="sound"
+          sound="src: #soundFile"
+          autoplay="false"
+        ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
 
     <div
-        onclick="toggleModal()"
-        id="footerModal"
-        class="footerModalbg hideModal"
-      >
-        <div class="footerModal">
-          <img src="../assets/logos/novartis-new-logo-old.png" />
-          <p>
-            Novartis de Colombia S.A. Calle 93B No. 16-31. PBX 654 44 44.
-            Bogotá, D.C. Novartis de Colombia S.A. Novartis Pharma, AG de
-            Basilea, Suiza. ® = Marca registrada. Mayor información en el
-            Departamento Medico de Novartis de Colombia S.A. Tel. 6544444.
-            Material exclusivo para uso de pacientes. No se autoriza la
-            grabación o toma de fotografías del material y tampoco difusión por
-            medios no autorizados por Novartis. Para mayor información consultar
-            la información completa para la prescripción de Cosentyx (en la
-            palabra Cosentyx debe haber un link que redirija a la sucinta que
-            adjunté en el correo) Fecha de aprobación: XXXXXX. Fecha de
-            caducidad: XXXXXX. Código de aprobación P3: XXXXXX. Si desea
-            reportar un evento adverso ingrese al siguiente link:
-            https://www.report.novartis.com/es o a través del correo
-            electrónico: colombia.farmacovigilancia@novartis.com
-          </p>
-        </div>
+      onclick="toggleModal()"
+      id="footerModal"
+      class="footerModalbg hideModal"
+    >
+      <div class="footerModal">
+        <img src="../assets/logos/novartis-new-logo-old.png" />
+        <p>
+          Novartis de Colombia S.A. Calle 93B No. 16-31. PBX 654 44 44. Bogotá,
+          D.C. Novartis de Colombia S.A. Novartis Pharma, AG de Basilea, Suiza.
+          ® = Marca registrada. Mayor información en el Departamento Medico de
+          Novartis de Colombia S.A. Tel. 6544444. Material exclusivo para uso de
+          pacientes. No se autoriza la grabación o toma de fotografías del
+          material y tampoco difusión por medios no autorizados por Novartis.
+          Para mayor información consultar la información completa para la
+          prescripción de Cosentyx (en la palabra Cosentyx debe haber un link
+          que redirija a la sucinta que adjunté en el correo) Fecha de
+          aprobación: XXXXXX. Fecha de caducidad: XXXXXX. Código de aprobación
+          P3: XXXXXX. Si desea reportar un evento adverso ingrese al siguiente
+          link: https://www.report.novartis.com/es o a través del correo
+          electrónico: colombia.farmacovigilancia@novartis.com
+        </p>
       </div>
+    </div>
 
     <div id="stepTitle" class="stepTitle">
       <h2>Paso 1</h2>

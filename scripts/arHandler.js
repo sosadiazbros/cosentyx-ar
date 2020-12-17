@@ -35,8 +35,7 @@ let title = document.getElementById("stepTitle");
 let step = 1;
 
 function NextModel() {
-  let element = model.getAttribute("gltf-model");
-  if (element === "../assets/models/CosentyxS5.gltf") {
+  if (step > 4) {
     window.location.replace("../pages/photo-page.html");
   } else {
     step++;
@@ -57,8 +56,7 @@ function NextModel() {
 }
 
 function PrevModel() {
-  let element = model.getAttribute("gltf-model");
-  if (element === "../assets/models/CosentyxS1.gltf") {
+  if (step < 2) {
     window.location.replace("../pages/welcome-page.html");
   } else {
     step--;

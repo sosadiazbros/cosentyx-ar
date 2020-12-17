@@ -34,6 +34,18 @@ let sound = document.querySelector("#sound");
 let title = document.getElementById("stepTitle");
 let step = 1;
 
+let time = false
+function timeOutNextModel() {
+  if(!time){
+    setTimeout(function () {
+    console.log("next model")
+    NextModel()
+    time = false
+    }, 1000);
+    time = true
+  } 
+}
+
 function NextModel() {
   if (step > 4) {
     window.location.replace("../pages/photo-page.html");

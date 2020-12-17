@@ -1,14 +1,18 @@
+var isOnMarker = false;
+
 AFRAME.registerComponent("markerhandler", {
   init: function () {
     var model = document.querySelector("#model3D");
 
     this.el.sceneEl.addEventListener("markerFound", () => {
+      isOnMarker = true;
       model.setAttribute("animation-mixer", { timeScale: 1 });
       var sonido = document.querySelector("#sound");
       sonido.components.sound.playSound();
       console.log("marcador encontrado...");
     });
     this.el.sceneEl.addEventListener("markerLost", () => {
+      isOnMarker = false;
       model.setAttribute("animation-mixer", { timeScale: 0 });
       var sonido = document.querySelector("#sound");
       sonido.components.sound.stopSound();
@@ -62,7 +66,9 @@ function PrevModel() {
     sound.components.sound.stopSound();
     sound.removeAttribute("sound");
     sound.setAttribute("sound", `src: #audio${step}`);
-    sound.components.sound.playSound();
+    if (isOnMarker) {
+      sound.components.sound.playSound();
+    }
 
     title.innerHTML = `<h2>Paso ${step}</h2>`;
 

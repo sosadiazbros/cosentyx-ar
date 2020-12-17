@@ -32,40 +32,42 @@ let step = 1;
 
 function NextModel() {
   let element = model.getAttribute("gltf-model");
-  element === "../assets/models/CosentyxS5.gltf" &&
-  window.location.replace("../pages/photo-page.html");
-  step++;
+  if (element === "../assets/models/CosentyxS5.gltf") {
+    window.location.replace("../pages/photo-page.html");
+  } else {
+    step++;
+    model.removeAttribute("gltf-model");
+    model.setAttribute("gltf-model", `#model${step}`);
 
-  model.removeAttribute("gltf-model");
-  model.setAttribute("gltf-model", `#model${step}`);
+    sound.components.sound.stopSound();
+    sound.removeAttribute("sound");
+    sound.setAttribute("sound", `src: #audio${step}`);
+    sound.components.sound.playSound();
 
-  sound.components.sound.stopSound();
-  sound.removeAttribute("sound");
-  sound.setAttribute("sound", `src: #audio${step}`);
-  sound.components.sound.playSound();
+    title.innerHTML = `<h2>Paso ${step}</h2>`;
 
-  title.innerHTML = `<h2>Paso ${step}</h2>`;
-
-  analyticsEvent("Pagina1", 200);
+    analyticsEvent("Pagina1", 200);
+  }
 }
 
 function PrevModel() {
   let element = model.getAttribute("gltf-model");
-  element === "../assets/models/CosentyxS1.gltf" &&
-  window.location.replace("../pages/welcome-page.html");
-  step--;
-  
-  model.removeAttribute("gltf-model");
-  model.setAttribute("gltf-model", `#model${step}`);
+  if (element === "../assets/models/CosentyxS1.gltf") {
+    window.location.replace("../pages/welcome-page.html");
+  } else {
+    step--;
+    model.removeAttribute("gltf-model");
+    model.setAttribute("gltf-model", `#model${step}`);
 
-  sound.components.sound.stopSound();
-  sound.removeAttribute("sound");
-  sound.setAttribute("sound", `src: #audio${step}`);
-  sound.components.sound.playSound();
+    sound.components.sound.stopSound();
+    sound.removeAttribute("sound");
+    sound.setAttribute("sound", `src: #audio${step}`);
+    sound.components.sound.playSound();
 
-  title.innerHTML = `<h2>Paso ${step}</h2>`;
+    title.innerHTML = `<h2>Paso ${step}</h2>`;
 
-  analyticsEvent("Pagina1", 200);
+    analyticsEvent("Pagina1", 200);
+  }
 }
 
 function analyticsEvent(evento, tiempo) {

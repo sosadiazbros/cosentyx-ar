@@ -32,9 +32,9 @@ let step = 1;
 
 function NextModel() {
   let element = model.getAttribute("gltf-model");
-  step++;
   element === "../assets/models/CosentyxS5.gltf" &&
-    window.location.replace("../pages/photo-page.html");
+  window.location.replace("../pages/photo-page.html");
+  step++;
 
   model.removeAttribute("gltf-model");
   model.setAttribute("gltf-model", `#model${step}`);
@@ -49,12 +49,12 @@ function NextModel() {
   analyticsEvent("Pagina1", 200);
 }
 
-function PrevModel(){
+function PrevModel() {
   let element = model.getAttribute("gltf-model");
-  step--;
   element === "../assets/models/CosentyxS1.gltf" &&
-    window.location.replace("../pages/welcome-page.html");
-
+  window.location.replace("../pages/welcome-page.html");
+  step--;
+  
   model.removeAttribute("gltf-model");
   model.setAttribute("gltf-model", `#model${step}`);
 

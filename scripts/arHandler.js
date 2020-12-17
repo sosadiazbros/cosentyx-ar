@@ -40,17 +40,17 @@ function timeOutNextModel() {
     setTimeout(function () {
       NextModel();
       time = false;
-    }, 500);
+    }, 200);
     time = true;
   }
 }
 
-function timeOutPrevtModel() {
+function timeOutPrevModel() {
   if (!time) {
     setTimeout(function () {
       PrevModel();
       time = false;
-    }, 1000);
+    }, 200);
     time = true;
   }
 }

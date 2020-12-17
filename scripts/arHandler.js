@@ -33,7 +33,7 @@ let step = 1;
 function NextModel() {
   let element = sound.getAttribute("sound");
   step++;
-  alert(element)
+  console.log("ELementoooo: " + element)
   element === "src: #audio5" &&
     window.location.replace("../pages/photo-page.html");
 

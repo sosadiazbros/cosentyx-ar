@@ -34,9 +34,29 @@ let sound = document.querySelector("#sound");
 let title = document.getElementById("stepTitle");
 let step = 1;
 
+let time = false;
+function timeOutNextModel() {
+  if (!time) {
+    setTimeout(function () {
+      NextModel();
+      time = false;
+    }, 500);
+    time = true;
+  }
+}
+
+function timeOutPrevModel() {
+  if (!time) {
+    setTimeout(function () {
+      PrevModel();
+      time = false;
+    }, 500);
+    time = true;
+  }
+}
+
 function NextModel() {
-  let element = model.getAttribute("gltf-model");
-  if (element === "../assets/models/CosentyxS5.gltf") {
+  if (step > 4) {
     window.location.replace("../pages/photo-page.html");
   } else {
     step++;
@@ -57,8 +77,7 @@ function NextModel() {
 }
 
 function PrevModel() {
-  let element = model.getAttribute("gltf-model");
-  if (element === "../assets/models/CosentyxS1.gltf") {
+  if (step < 2) {
     window.location.replace("../pages/welcome-page.html");
   } else {
     step--;

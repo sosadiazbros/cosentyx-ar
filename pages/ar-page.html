@@ -55,41 +55,41 @@
         <a-asset-item id="model5" src="../assets/models/CosentyxS5.gltf">
         </a-asset-item>
 
-        <audio
+        <a-asset-item
           id="audio1"
           src="../assets/sounds/step-1.mp3"
-          preload="auto"
-        ></audio>
+          response-type="arraybuffer"
+        ></a-asset-item>
 
-        <audio
+        <a-asset-item
           id="audio2"
           src="../assets/sounds/step-2.mp3"
-          preload="auto"
-        ></audio>
+          response-type="arraybuffer"
+        ></a-asset-item>
 
-        <audio
+        <a-asset-item
           id="audio3"
           src="../assets/sounds/step-3.mp3"
-          preload="auto"
-        ></audio>
+          response-type="arraybuffer"
+        ></a-asset-item>
 
-        <audio
+        <a-asset-item
           id="audio4"
           src="../assets/sounds/step-4.mp3"
-          preload="auto"
-        ></audio>
+          response-type="arraybuffer"
+        ></a-asset-item>
 
-        <audio
+        <a-asset-item
           id="audio5"
           src="../assets/sounds/step-5.mp3"
-          preload="auto"
-        ></audio>
+          response-type="arraybuffer"
+        ></a-asset-item>
       </a-assets>
       <a-marker markerhandler preset="hiro">
         <a-entity
           id="model3D"
           position="0 0 0"
-          scale="0.600 0.600 0.600"
+          scale="0.500 0.500 0.500"
           animation-mixer
           gltf-model="#model1"
         ></a-entity>
@@ -174,10 +174,10 @@
 
     <div class="footer-image">
       <div class="footer-arrows">
-        <a onclick="PrevModel()">
+        <a onclick="timeOutPrevModel()">
           <img src="../assets/images/left-arrow.png" />
         </a>
-        <a onclick="NextModel()">
+        <a onclick="timeOutNextModel()">
           <img src="../assets/images/right-arrow.png" />
         </a>
       </div>

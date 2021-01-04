@@ -35,3 +35,25 @@
 .hideModal {
   display: none;
 }
+
+.steps img {
+  width: 200px;
+  height: 200px;
+}
+
+.stepsModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  background-color: white;
+  width: 70%;
+  font-size: 12px;
+  padding: 20px;
+  border: solid 0.5px gray;
+  border-radius: 10px;
+  color: #ab1862;
+  text-align: left;
+  z-index: 3;
+}

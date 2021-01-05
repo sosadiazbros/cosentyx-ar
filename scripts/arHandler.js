@@ -56,7 +56,7 @@ function timeOutPrevModel() {
 }
 
 function NextModel() {
-  if (step > 4) {
+  if (step > 5) {
     window.location.replace("../pages/photo-page.html");
   } else {
     step++;

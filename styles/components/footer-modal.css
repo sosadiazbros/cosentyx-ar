@@ -57,3 +57,12 @@
   text-align: left;
   z-index: 3;
 }
+
+
+.stepsModal button {
+  background-color: white;
+  border: 0.5px solid #ab1862;
+  color: #ab1862;
+  padding: 10px;
+  border-radius: 5px;
+}

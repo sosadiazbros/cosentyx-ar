@@ -40,19 +40,25 @@
       physicallyCorrectLights: true;"
     >
       <a-assets timeout="30000">
-        <a-asset-item id="model1" src="../assets/models/CosentyxS1.gltf">
+        <a-asset-item id="model1" src="../assets/models/new/CosentyxS1.gltf">
         </a-asset-item>
 
-        <a-asset-item id="model2" src="../assets/models/CosentyxS2.gltf">
+        <a-asset-item id="model2" src="../assets/models/new/CosentyxS2.gltf">
         </a-asset-item>
 
-        <a-asset-item id="model3" src="../assets/models/CosentyxS3.gltf">
+        <a-asset-item id="model3" src="../assets/models/new/CosentyxS3.gltf">
         </a-asset-item>
 
-        <a-asset-item id="model4" src="../assets/models/CosentyxS4.gltf">
+        <a-asset-item id="model4" src="../assets/models/new/CosentyxS4.gltf">
         </a-asset-item>
 
-        <a-asset-item id="model5" src="../assets/models/CosentyxS5.gltf">
+        <a-asset-item id="model5" src="../assets/models/new/CosentyxS5.gltf">
+        </a-asset-item>
+
+        <a-asset-item id="model6" src="../assets/models/new/CosentyxS6.gltf">
+        </a-asset-item>
+
+        <a-asset-item id="model7" src="../assets/models/new/CosentyxS7.gltf">
         </a-asset-item>
 
         <a-asset-item
@@ -82,6 +88,18 @@
         <a-asset-item
           id="audio5"
           src="../assets/sounds/step-5.mp3"
+          response-type="arraybuffer"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="audio6"
+          src="../assets/sounds/step-6.mp3"
+          response-type="arraybuffer"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="audio7"
+          src="../assets/sounds/step-7.mp3"
           response-type="arraybuffer"
         ></a-asset-item>
       </a-assets>
@@ -127,6 +145,22 @@
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+
+    <div onclick="toggleModal2()" id="footerModal2" class="footerModalbg">
+      <div class="stepsModal steps">
+        <img src="../assets/images/ar-animation.gif" />
+        <p>Por favor siga las indicaciones:</p>
+        <ul>
+          <li>Mantener enfocado el marcador en la cámara del teléfono</li>
+          <li>Subir el volumen</li>
+          <li>
+            Con los botones Anterior y Siguiente podrá navegar por los pasos de
+            aplicación.
+          </li>
+        </ul>
+        <button>Entendido!</button>
+      </div>
+    </div>
 
     <div
       onclick="toggleModal()"

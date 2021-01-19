@@ -6,6 +6,7 @@
 body {
   font-family: Flama;
   font-size: 15px;
+  margin: 0;
 }
 
 .father {
@@ -19,9 +20,18 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 70%;
+  width: 100%;
   color: #ab1862;
-  padding-top: 10%;
+  padding-bottom: 200px;
+}
+
+.header {
+  width: 100%;
+  background-image: url("../assets/images/header-cosentyx.png");
+  background-size: cover;
+  padding: 30px 0 30px 0;
+  color: white;
+  margin-bottom: 20px;
 }
 
 .container h1 {
@@ -46,11 +56,20 @@ body {
 }
 
 .questions {
-  color: #212121;
+  color: #ab1862;
+  width: 70%;
+}
+
+.stepCard {
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  margin: 20px 0 20px 0;
+  width: 100%;
 }
 
 .formValues img {
-  width: 40px;
+  width: 30px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -99,7 +118,7 @@ body {
 }
 
 .footer-image {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -142,14 +161,22 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 70%;
+    width: 100%;
     color: #ab1862;
-    padding-top: 5%;
   }
 
   .formValues img {
     width: 25px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .header {
+    width: 100%;
+    background-image: url("../assets/images/header-cosentyx.png");
+    background-size: cover;
+    padding: 30px 0 30px 0;
+    color: white;
+    margin-bottom: 0px;
   }
 }

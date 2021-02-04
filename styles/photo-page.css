@@ -11,7 +11,7 @@ body {
   opacity: 0.7;
   position: absolute;
   right: 10px;
-  top: 50px;
+  top: 90px;
 }
 
 .support img {
@@ -24,7 +24,7 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
-  bottom: 150px;
+  bottom: 160px;
   display: flex;
   justify-content: center;
 }
@@ -54,7 +54,7 @@ body {
   padding: 0px;
   color: #ab1862;
   text-align: center;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .stepTitle p {

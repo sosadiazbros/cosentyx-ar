@@ -1,3 +1,4 @@
+const unmuteAudio = require("unmute-ios-audio");
 var isOnMarker = false;
 
 AFRAME.registerComponent("markerhandler", {
@@ -9,6 +10,7 @@ AFRAME.registerComponent("markerhandler", {
       model.setAttribute("animation-mixer", { timeScale: 1 });
       var sonido = document.querySelector("#sound");
       sonido.components.sound.playSound();
+      unmuteAudio();
       console.log("marcador encontrado...");
     });
     this.el.sceneEl.addEventListener("markerLost", () => {

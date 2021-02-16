@@ -1,0 +1,23 @@
+{
+  "name": "cosentyx-ar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosadiazbros/cosentyx-ar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sosadiazbros/cosentyx-ar/issues"
+  },
+  "homepage": "https://github.com/sosadiazbros/cosentyx-ar#readme",
+  "dependencies": {
+    "unmute-ios-audio": "^3.3.0"
+  }
+}

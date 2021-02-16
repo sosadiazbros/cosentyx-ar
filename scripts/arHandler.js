@@ -8,9 +8,9 @@ AFRAME.registerComponent("markerhandler", {
     this.el.sceneEl.addEventListener("markerFound", () => {
       isOnMarker = true;
       model.setAttribute("animation-mixer", { timeScale: 1 });
+      unmuteAudio();
       var sonido = document.querySelector("#sound");
       sonido.components.sound.playSound();
-      unmuteAudio();
       console.log("marcador encontrado...");
     });
     this.el.sceneEl.addEventListener("markerLost", () => {

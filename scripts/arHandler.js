@@ -1,3 +1,11 @@
+let step = 1;
+let time = false;
+let model = document.querySelector("#model3D");
+let asset = document.querySelector("a-assets");
+let loader = document.getElementById("loader");
+let sound = document.querySelector("#sound");
+let title = document.getElementById("stepTitle");
+
 const unmuteAudio = require("unmute-ios-audio");
 var isOnMarker = false;
 
@@ -23,20 +31,12 @@ AFRAME.registerComponent("markerhandler", {
   },
 });
 
-let asset = document.querySelector("a-assets");
-let loader = document.getElementById("loader");
 asset.addEventListener("loaded", loadedHandler);
 
 function loadedHandler() {
   loader.style.display = "none";
 }
 
-let model = document.querySelector("#model3D");
-let sound = document.querySelector("#sound");
-let title = document.getElementById("stepTitle");
-let step = 1;
-
-let time = false;
 function timeOutNextModel() {
   if (!time) {
     setTimeout(function () {

@@ -69,6 +69,7 @@ function NextModel() {
     sound.removeAttribute("sound");
     sound.setAttribute("sound", `src: #audio${step}`);
     if (isOnMarker) {
+      unmuteAudio();
       sound.components.sound.playSound();
     }
 
@@ -90,6 +91,7 @@ function PrevModel() {
     sound.removeAttribute("sound");
     sound.setAttribute("sound", `src: #audio${step}`);
     if (isOnMarker) {
+      unmuteAudio();
       sound.components.sound.playSound();
     }
 

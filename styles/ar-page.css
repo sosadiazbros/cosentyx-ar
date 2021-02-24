@@ -75,6 +75,10 @@ body {
   width: 50%;
 }
 
+.footer-arrows a:active {
+  background-color: rgba(106, 41, 96, 0.1);
+}
+
 .footer-image {
   position: absolute;
   bottom: 0;

@@ -3,6 +3,10 @@
   src: url("../assets/fonts/Flama-Basic.otf");
 }
 
+html, body{
+  height: 100%;
+}
+
 body {
   font-family: Flama;
   background-image: url("../assets/images/fondo-1.png");
@@ -82,10 +86,12 @@ body {
 }
 
 .footer {
-  margin-top: 30%;
+  position: absolute;
+  bottom: 0;
   color: white;
   font-size: 10px;
   text-align: justify;
+  padding: 10px;
 }
 
 @media (max-width: 360px) {
